@@ -1,0 +1,59 @@
+html {
+    position: relative;
+}
+
+/* body {
+    margin-bottom: 100px;
+} */
+.jumbotron {
+    height: 500px;
+    background-image: url('../img/Header-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 -100px;
+    color: white;
+    overflow: hidden;
+}
+
+.jumbotron img {
+    width: 200px;
+    border: 5px solid white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+}
+
+.jumbotron h1,
+.jumbotron p {
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+}
+
+hr {
+    width: 35%;
+    border-top: 5px solid #666;
+}
+
+.row {
+    text-align: justify;
+}
+
+section {
+    min-height: 600px;
+}
+
+.contact {
+    min-height: 800px;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 100px;
+    background-color: #333;
+}
+
+footer p,
+footer a {
+    color: #aaa;
+    font-size: 1em;
+    text-decoration: none;
+}
