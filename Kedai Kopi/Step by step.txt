@@ -1,0 +1,8 @@
+1. Setup awal HTML
+2. Menghubungkan dengan file style.css
+3. Setup fonts (Poppins)
+4. Setup icons (Feather Icons)
+5. Setup awal css
+    - Variable untuk menyimpan warna
+    - Menambahkan reset
+6. Membuat Navbar
