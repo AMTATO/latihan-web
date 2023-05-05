@@ -6,3 +6,4 @@
     - Variable untuk menyimpan warna
     - Menambahkan reset
 6. Membuat Navbar
+7. Membuat Hero section
