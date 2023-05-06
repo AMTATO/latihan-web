@@ -7,3 +7,5 @@
     - Menambahkan reset
 6. Membuat Navbar
 7. Membuat Hero section
+8. Membuat About section
+9. Membuat Menu section
