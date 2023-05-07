@@ -200,6 +200,27 @@ body {
   font-weight: 100;
   line-height: 1.6;
 }
+
+.menu .row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.menu .row .menu-card{
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.menu .row .menu-card img{
+  border-radius: 50%;
+  width: 80%;
+}
+
+.menu .row .menu-card .menu-card-title{
+  margin-top: 1rem auto .5rem;
+}
 /* Menu Section End */
 
 /* Media Queries Start*/
@@ -271,6 +292,10 @@ body {
 
   .about .row .content p{
     font-size: 1.6rem;
+  }
+
+  .menu p{
+    font-size: 1.2rem;
   }
 }
 

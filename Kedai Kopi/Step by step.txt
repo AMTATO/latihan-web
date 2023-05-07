@@ -9,3 +9,4 @@
 7. Membuat Hero section
 8. Membuat About section
 9. Membuat Menu section
+10. Membuat Contact section
