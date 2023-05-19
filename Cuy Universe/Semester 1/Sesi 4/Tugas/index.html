@@ -18,20 +18,43 @@
   <body class="bg-black">
       <div class="container-fluid text-center p-5">
         <div class="row">
-          <div class="col">
+          <div class="col-3">
+            <!-- Card Ruang Makan Start -->
             <div class="card" style="width: 18rem">
-              <img src="img/ruang-makan.jpg" class="card-img-top" alt="Ruang Makan" />
-              <div class="card-body">
-                <h5 class="card-title">Ruang Makan</h5>
-                <p class="card-text">
-                  Saklar untuk menyalakan lampu di Ruang Makan.
+                <div class="ratio ratio-16x9">
+                    <img src="img/ruang-makan.jpg" class="card-img-top" alt="Ruang Makan" />
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Ruang Makan</h5>
+                    <p class="card-text">
+                  Saklar untuk menyalakan lampu di ruang makan.
                 </p>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-secondary" type="button">OFF</button>
+                    <button class="btn btn-secondary" type="button" id="saklarRuangMakan">OFF</button>
                     <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#modalRuangMakan">Lihat Semua Lampu</button>
                 </div>
               </div>
             </div>
+            <!-- Card Ruang Makan End -->
+          </div>
+          <div class="col-3">
+            <!-- Card Ruang Tidur Start -->
+            <div class="card" style="width: 18rem">
+                <div class="ratio ratio-16x9">
+                    <img src="img/ruang-kamar.jpg" class="card-img-top" alt="Ruang Tidur" />
+                </div>
+              <div class="card-body">
+                <h5 class="card-title">Ruang Tidur</h5>
+                <p class="card-text">
+                  Saklar untuk menyalakan lampu di ruang tidur.
+                </p>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-secondary" type="button" id="saklarRuangTidur">OFF</button>
+                    <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#modalRuangTidur">Lihat Semua Lampu</button>
+                </div>
+              </div>
+            </div>
+            <!-- Card Ruang Tidur End -->
           </div>
         </div>
       </div>
@@ -41,35 +64,69 @@
 
 
     <!-- Modal Start -->
-    <div class="modal fade" id="modalRuangMakan" tabindex="-1" aria-labelledby="modalRuangMakanLabel" aria-hidden="true">
+    <!-- Modal Ruang Makan Start-->
+    <div class="modal fade" id="modalRuangMakan" tabindex="-1">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Ruang Makan</h1>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Ruang Makan</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="container text-center">
                     <div class="row">
-                      <div class="col">
-                        <img src="img/off.gif" alt="Lampu" id="lampu1" class="mb-2" />
-                        <div class="form-switch">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            role="switch"
-                            id="saklar1"
-                            onchange="saklar()"
-                          />
+                        <div class="col">
+                            <img src="img/off.gif" alt="Lampu" id="lampu1" class="mb-2" />
                         </div>
-                      </div>
                     </div>
-                  </div>
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-secondary" type="button" id="saklar1" style="width: 5rem;">OFF</button>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
-          </div>
+            
+        </div>
         </div>
     </div>
-      
+    <!-- Modal Ruang Makan End-->
+    
+    <!-- Modal Ruang Tidur Start-->
+    <div class="modal fade" id="modalRuangTidur" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Ruang Tidur</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
+                            <img src="img/off.gif" alt="Lampu" id="lampu2" class="mb-2" />
+                        </div>
+                        <div class="col">
+                            <img src="img/off.gif" alt="Lampu" id="lampu3" class="mb-2" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-secondary" type="button" id="saklar2" style="width: 5rem;">OFF</button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-secondary" type="button" id="saklar3" style="width: 5rem;">OFF</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+        <!-- Modal Ruang Tidur End-->
     <!-- Modal End -->
 
     <!-- My Script -->
