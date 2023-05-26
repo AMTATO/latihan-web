@@ -1,0 +1,21 @@
+{
+  "name": "sesi-7",
+  "version": "1.0.0",
+  "description": "Cuy Universe Sesi 7 - Backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "Sesi",
+    "7",
+    "-",
+    "Backend"
+  ],
+  "author": "amtato",
+  "license": "ISC",
+  "dependencies": {
+    "@arismun/format-rupiah": "^3.0.0",
+    "nodemon": "^2.0.22"
+  }
+}
