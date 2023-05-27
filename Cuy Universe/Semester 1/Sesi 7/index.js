@@ -1,20 +1,27 @@
-const http = require('http');
-const rupiah = require('@arismun/rupiah-format');
-const hostname = 'localhost';
+const http = require("http");
+const rupiah = require("rupiah-format");
+const fs = require("fs");
+
+const hostname = "localhost";
 const port = 3001;
 
 // Request => Data masuk dari client
 // Response => Data keluar dari sistem
-const server = http.createServer(function (req, res){
-    const nama = "AMTATO";
-    const saldo = 100000;
-    const jajan = 76000;
-    const sisa = saldo - jajan;
+const server = http.createServer(function (req, res) {
+  const nama = "AMTATO";
+  let saldo = 100000;
+  let jajan = 76000;
+  let sisa = saldo - jajan;
 
-    const sisarupiah = rupiah.convert(sisa);
-    console.log(sisarupiah);
+  saldo = rupiah.convert(saldo);
+  jajan = rupiah.convert(jajan);
+  sisa = rupiah.convert(sisa);
 
-    const hasil = `
+  fs.appendFile("sisa-uang.txt", sisa, () => {
+    console.log("Data uang berhasil disimpan.");
+  });
+  
+  const hasil = `
     <head>
         <title>Saldo ${nama}</title>
         <style>
@@ -31,12 +38,12 @@ const server = http.createServer(function (req, res){
         <p>
             Halo nama saya ${nama}, saya jajan sebanyak ${jajan}.<br> Uang saya sebelumnya ${saldo}.<br> Jadi sisa uang saya sekarang adalah ${sisa}.
         </p>
-    </body>`
+    </body>`;
 
-    res.statusCode = 200;
-    res.end(hasil);
+  res.statusCode = 200;
+  res.end(hasil);
 });
 
-server.listen(3001, "127.0.0.1", "", function(){
-    console.log(`Server is Up in ${hostname}:${port}`);
-}); 
+server.listen(3001, "127.0.0.1", "", function () {
+  console.log(`Server is Up in ${hostname}:${port}`);
+});

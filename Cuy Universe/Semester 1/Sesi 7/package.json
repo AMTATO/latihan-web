@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@arismun/format-rupiah": "^3.0.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "rupiah-format": "^1.0.0"
   }
 }
